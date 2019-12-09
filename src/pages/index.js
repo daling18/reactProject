@@ -2,13 +2,17 @@
 import Loabable from 'react-loadable'
 // 引入loading的组件
 import Loading from "../component/Loading"
+import Shopcar from "./shopcar"
+import My from "./my"
 
 const NotFound = Loabable ({
-  loader : () => import('需要加效果的组件'),
+  loader : () => import('../component/Loading'),
   loading:Loading
 })
 
 // 将组件暴露
 export {
-  NotFound 
+  NotFound,
+  Shopcar,
+  My
 }

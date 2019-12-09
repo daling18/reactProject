@@ -1,0 +1,93 @@
+.shopheader{
+    height: .80rem;
+    background: #fff;
+}
+.shopheader_top{
+    height: .48rem;
+    font-size: .165rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shopheader_top>i{
+    margin-left: .05rem;
+    margin-right: .05rem;
+}
+
+.shopRecommend{
+    margin-top: .25rem;
+    height: 18.5rem;
+}
+.shopConent{
+    width: 100%;
+    background: #fff;
+    margin-top: .12rem;
+    height: 3.8rem;
+    position: relative;
+    background: url(https://static-as.missfresh.cn/frontend/cart/static/img/icon_buycar_empty_icon.3a1d061.png) no-repeat center #fff;
+    background-size: 1rem 1rem;
+    background-position-y: 1.7rem;
+}
+.kong{
+    width: 100%;
+    height: 2.4rem;
+    position: absolute;
+    bottom: 0;
+}
+.kong>p{
+    width: 100%;
+    text-align: center;
+    color: #7f7f7f;
+    margin-top: 1.5rem;
+    font-size: .16rem;
+}
+.shop_p{
+    font-size: .2rem;
+    width: 2rem;
+    margin-left: .08rem;
+    margin-bottom:0 ;
+}
+.shop_ul{
+    display: flex;
+    padding: .06rem;
+    flex-wrap: wrap;
+}
+.shop_ul>li{
+    height: 2.6rem;
+    width: 1.77rem;
+    background: #fff;
+    margin:.018rem;
+    border-radius: 0.15rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.li_img{
+    height: 1.61rem;
+    width: 1.61rem;
+}
+.li_p{
+    width: 100%;
+    height: .2rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 0;
+    padding: 0 .08rem;
+    
+   
+}
+.li_xia{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 .08rem;
+    margin-top: .1rem;
+    align-items: center;
+}
+.li_xia>img{
+    width: .3rem;
+    height: .3rem;
+}
