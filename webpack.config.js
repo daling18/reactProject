@@ -10,9 +10,15 @@ module.exports  = {
             {
             test: /\.js$/,   
             exclude: /node_modules/, // 排除node_modules中的代码
-            use: [{
-                loader: 'babel-loader'
-            }],
+            use: {
+                loader: "babel-loader",
+                options: {
+                    presets: ['@babel/preset-env'],
+                    plugins:['@babel/plugin-proposal-class-properties']
+                }
+            }
+                 
+          
         },
         {
             test: /\.less$/,
@@ -23,7 +29,16 @@ module.exports  = {
                     options: {
                         importLoaders: 2
                     }
-                }, 'less-loader', 'postcss-loader']
+                },
+                'postcss-loader',
+                {
+                    loader:"less-loader",
+                    options:  {
+                         javascriptEnabled: true
+                        
+                    }
+                },
+            ]
         },
         {
             test: /\.css$/,
