@@ -1,14 +1,16 @@
 // 添加 loading效果
 import Loabable from 'react-loadable'
 // 引入loading的组件
-import Loading from "../component/Loading"
+// import Loading from "../component/Loading"
+import classify from './Classify'
 
-const NotFound = Loabable ({
-  loader : () => import('需要加效果的组件'),
-  loading:Loading
+const Classify = Loabable ({
+  loader : () => import('./Classify'),
+  loading : classify
 })
 
 // 将组件暴露
 export {
-  NotFound 
+  // NotFound ,
+  Classify
 }

@@ -1,11 +1,13 @@
 import React,{Component} from 'react'
-
+import TabLeft from './TabLeft'
 class Classify extends Component{
-    render(h) {
+    render() {
+        console.log(this.props)
         return(
-            <div>傻嘚</div>
+                <TabLeft/>
         )
     }
 }
+
 
 export default Classify
