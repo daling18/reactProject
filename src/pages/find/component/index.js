@@ -8,6 +8,6 @@ import SoftDrinks from './softDrinks'
 export {
   CarefullyChosen,
   Cookbook,
-  Life,
-  SoftDrinks
+  SoftDrinks,
+  Life
 }

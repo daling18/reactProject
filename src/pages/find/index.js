@@ -2,23 +2,25 @@ import React, { Component } from 'react'
 import { Tabs } from 'antd';
 const { TabPane } = Tabs;
 import '../../assets/css/discover.less'
+import logImg from '../../assets/img/find_head_logo.png'
+
 import {
   CarefullyChosen,
   Cookbook,
   Life,
   SoftDrinks
 } from './component'
-import Loading from '../../component/Loading'
+  
 export default class Find extends Component {
-
+  
   render() {
     return (
-      <div>
+      <div className="content">
       <Tabs defaultActiveKey="1" className='tabs'>
         <TabPane className='aTab'
           tab={
             <div>
-            <img src="http://static-as.missfresh.cn/frontend/discovery/static/img/author-default.3af07f7.png"/>
+            <img src={logImg} className="logoImg" / >
             <span>
             精选
             </span>
@@ -47,7 +49,7 @@ export default class Find extends Component {
           }
           key="3"
         >
-          <Life/>
+          <SoftDrinks/>
         </TabPane>
         <TabPane
           tab={
@@ -57,11 +59,12 @@ export default class Find extends Component {
           }
           key="4"
         >
-          <SoftDrinks/>
+          <Life/>
         </TabPane>
       </Tabs>
     </div>
     )
   }
+  
 }
 

@@ -3,41 +3,81 @@
   font-weight: 500;
   
 }
+.ant-tabs-bar{
+  position: fixed;
+  top:25px;
+  width: 100%;
+  background-color: #fff;
+  z-index: 100;
+}
+.ant-tabs .ant-tabs-top-content.ant-tabs-content-animated{
+  margin-top: 30px;
+}
 .ant-tabs-nav .ant-tabs-tab{
   padding : .12rem .02rem;
 }
 
 .tabs span  {
-  padding : .12rem 0;
+  padding : .12rem ;
   
 }
- 
-.tabs img {
-  width: .24rem;
-  height : .24rem;
+.showInfo{
+  display: block;
+}
+.hideInfo{
+  display: none;
+}
+.alert{
+  z-index: 100;
+  position: fixed;
+  margin: 0 auto;
+  width:90%;
+  margin: 0;
+  background: transparent;
+  text-align: center;
+  top: 50%;
+  min-height: 1.5625rem;
+  .alertTxt{
+    background: rgba(40,40,40,.75);
+    border-radius: 5px;
+    max-width: 17rem;
+    padding: .5rem .6rem;
+    font-size: .875rem;
+    display: inline-block;
+    color: #fff;
+  }
+}
+.list-wrap {
+  margin: 0 15px;
+}
+.logoImg{
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  margin-right: 0.1rem;
+  margin-right: 10px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: -8px;
 }
 
 .list-header {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  padding: .1rem 0 .1rem;
+  margin-top: 10px;
+  line-height: .2rem;
+  border-bottom: 1px solid #d8d8d8 ;
 }
 .list-title {
   font-weight: 500;
-  font-size: .22rem;
+  font-size: 22px;
   color: #474245;
-  line-height: .28rem;
+  line-height: 28px;
 }
 .list-desc {
-  padding-left: .11rem;
-  font-size: .12rem;
-  line-height: .2rem;
+  padding-left: 11px;
+  font-size: 12px;
+  line-height: 35px;
   color: #969696;
   position: relative;
-  top:-0.1rem;
 }
 .list-desc-before:before {
   display: block;
@@ -45,7 +85,7 @@
   content: "";
   width: .02rem;
   height: .12rem;
-  background: #d8d8d8;
+  background: #eee;
   border-radius: .08rem;
   top: 50%;
   left: .05rem;
@@ -61,9 +101,10 @@
   background-color: #f5f5f5;
 }
 .article-list-wrap {
-  // font-size: .875rem;
+  
   .article-big {
     padding-bottom: 0.22rem;
+    // 大图的样式
     .big-wrap {
       padding-top: 0;
       .article-card{
@@ -72,18 +113,143 @@
         overflow: hidden;
         padding: .15rem 0;
         .article__author {
-          margin-bottom: .1rem;
+          margin-bottom: 10px;
           span{
-            font-size: .14rem;
-          line-height: .24rem;
-          color: #474245;
-          padding: 0 .07rem;
+            font-size: 14px;
+            line-height: 24px;
+            color: #474245;
+            padding: 0 7px ;
+            margin-bottom: 7px;
           }
         }
         .article__cover{
-
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 194px;
+          background-color: #f0f0f0;
+          background-repeat: no-repeat;
+          background-position: 50%;
+          padding: .1rem;
+          background-size: cover;
+          overflow: hidden;
+          border-radius: 10px ;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .article__title{
+          padding: 0;
+          margin: 10px 0 12px;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 25px;
+          color: #474245;
+        }
+        .overflow-ellipsis-line2 {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+        }
+        .article__controls{
+          display: flex;
+          justify-content: space-between;
+          .article__reading {
+            color: #969696;
+          }
+          .article__btn-share {
+            margin-left: 39px;
+            color: #474245;
+            .share{
+              padding-left:10px ;
+            }
+          }
+        }
+      }
+    }
+    // 图片的左右结构
+    .big-wrap1{
+      display: block;
+      .asc-wrap {
+        padding-top: 22px;
+        align-items: center;
+        .article-image{
+          position: relative;
+          width: 150px;
+          height: 103px;
+          flex-shrink: 0;
+          overflow: hidden;
+          border-radius: 10px;
+          line-height: 0;
+          font-size: 0;
+          img{
+            width: 150px;
+            height: 103px;
+            display: inline-block;
+          }
+        }
+        
+        .article-info{
+          padding-left: 15px;
+          flex: 1;
+          align-items: center;
+          overflow: hidden;
+          .follow-user-item {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            overflow: hidden;
+            .authorPhoto{
+              width: 18px;
+              height: 18px;
+              border-radius: 50%;
+            }
+            .format-small__name {
+              font-size: 12px;
+              line-height: 18px;
+              color: #474245;
+              padding: 0 7px;
+            }
+          }
+          .article-title {
+            margin: 10px 0 8px;
+            font-size: 16px;
+            color: #474346;
+            line-height: 20px;
+          }
+          .overflow-ellipsis-line2 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+          }
+          .article-tool {
+            justify-content: space-between;
+            margin-top: 13px;
+            height: 20px;
+            .tool-left {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              .article-tool-view {
+                font-size: 12px;
+                color: #969696;
+              }
+            }
+          }
         }
       }
     }
   }
+    
+}
+
+
+
+
+
+.flex{
+  display: flex!important;
 }
