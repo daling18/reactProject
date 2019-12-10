@@ -1,11 +1,18 @@
 // 添加 loading效果
 import Loabable from 'react-loadable'
 // 引入loading的组件
-import Loading from "../component/Loading"
+// import Loading from "../component/Loading"
+import classify from './Classify'
 
+<<<<<<< HEAD
 const Home = Loabable ({
   loader : () => import('./home'),
   loading:Loading
+=======
+const Classify = Loabable ({
+  loader : () => import('./Classify'),
+  loading : classify
+>>>>>>> classify
 })
 const Classify = Loabable ({
   loader : () => import('./classify'),
@@ -27,9 +34,14 @@ const Shopcar = Loabable ({
 
 // 将组件暴露
 export {
+<<<<<<< HEAD
   Home,
   Classify,
   Find,
   Shopcar,
   My
+=======
+  // NotFound ,
+  Classify
+>>>>>>> classify
 }
