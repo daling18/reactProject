@@ -16,6 +16,7 @@ export default class Life extends Component {
     getFindLifedata()
     .then(res => {
       // console.log(res)
+      
       this.setState({
         data: res.data
       })

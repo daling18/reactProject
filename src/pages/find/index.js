@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Tabs } from 'antd';
 const { TabPane } = Tabs;
 import '../../assets/css/discover.less'
-import logImg from '../../assets/img/find_head_logo.png'
+import logImg from '../../assets/img/find_head_logo.jpg'
 
 import {
   CarefullyChosen,
