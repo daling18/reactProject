@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
+import BScroll from 'better-scroll'
 import {getFindSortDrinksData} from '../../../../api/api'
 import PubSon from '../../pubilcCom/pubSon'
 export default class SoftDrinks extends Component {
   constructor(props){
     super(props)
-    this.handleScroll = this.handleScroll.bind(this)
   }
   state = {
     data : [],
-    index: 1
+    index: 1,
   }
   render() {
     return (
-      <div id="bigBox" >
+      <div id="bigBox" style={{height:"calc(100% - 25)"}}>
         <PubSon  data = {this.state.data} />
       </div>
     )
@@ -24,16 +24,19 @@ export default class SoftDrinks extends Component {
         data: res.data
       })
     }) 
-    window.addEventListener('scroll', () => this.handleScroll())
+      
+      const wrapper = document.querySelector('.ant-tabs-tabpane-active')
+       new BScroll(wrapper, {
+        click: true,  // better-scroll 默认会阻止浏览器的原生 click 事件
+        scrollY: true, //开启竖向滚动
+        mouseWheel: true,//开启鼠标滚轮
+        disableMouse: true,//启用鼠标拖动
+        disableTouch: true,//启用手指触摸
+        momentum: false ,//当快速滑动时是否开启滑动惯性
+        bounce: true //是否启用回弹动画效果
+      })
   }
-  // handleScroll(){
-  //   let clientHeight = document.querySelector(".app").clientHeight;//可视区域高度
-  //   let scrollHeight = document.querySelector("#bigBox").offsetHeight;//元素总高度
-  //   let scrollTop = document.querySelector("#bigBox").scrollTop;//滚动条卷去的高度
-  //   console.log(clientHeight)
-  //   console.log(scrollHeight)
-  //   console.log(scrollTop)
-  // }
+
 
   
   

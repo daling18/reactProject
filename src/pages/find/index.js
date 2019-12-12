@@ -15,7 +15,7 @@ export default class Find extends Component {
   
   render() {
     return (
-      <div className="content">
+      <div className="content" style={{paddingBottom: ".3rem"}}>
       <Tabs defaultActiveKey="1" className='tabs'>
         <TabPane className='aTab'
           tab={
@@ -31,7 +31,7 @@ export default class Find extends Component {
           
           <CarefullyChosen/>
         </TabPane>
-        <TabPane
+        <TabPane 
           tab={
             <span>
               快手食谱
@@ -41,7 +41,7 @@ export default class Find extends Component {
         >
           <Cookbook/>
         </TabPane>
-        <TabPane
+        <TabPane 
           tab={
             <span>
               甜点饮品
