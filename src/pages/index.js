@@ -4,6 +4,9 @@ import Loabable from 'react-loadable'
 import Loading from "../component/Loading"
 import Shopcar from "./shopcar"
 import My from "./my"
+import Login from "./login"
+import addressSelect from "./shopcar/sonRoute/addressSelect"
+import AddressAdd from "./shopcar/sonRoute/addressAdd"
 
 const NotFound = Loabable ({
   loader : () => import('../component/Loading'),
@@ -14,5 +17,8 @@ const NotFound = Loabable ({
 export {
   NotFound,
   Shopcar,
-  My
+  My,
+  addressSelect,
+  AddressAdd,
+  Login
 }
