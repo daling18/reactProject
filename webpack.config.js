@@ -10,9 +10,15 @@ module.exports  = {
             {
             test: /\.js$/,   
             exclude: /node_modules/, // 排除node_modules中的代码
-            use: [{
-                loader: 'babel-loader'
-            }],
+            use: {
+                loader: "babel-loader",
+                options: {
+                    presets: ['@babel/preset-env'],
+                    plugins:['@babel/plugin-proposal-class-properties']
+                }
+            }
+                 
+          
         },
         {
             test: /\.less$/,
@@ -40,14 +46,17 @@ module.exports  = {
                     options: {
                         importLoaders: 2,
                     }
-                }, 
+                },
+
                 'postcss-loader',
                 {
                     loader:"less-loader",
                     options:  {
                          javascriptEnabled: true
                     }
-                }]
+                },
+            ]
+           
         },
         {
             test: /\.css$/,
@@ -93,7 +102,8 @@ module.exports  = {
               pathRewrite: {'^/api' : ''},
               changeOrigin: true,     // target是域名的话，需要这个参数，
               secure: false,          // 设置支持https协议的代理
-            }
+            },
+            
         }
     },
     plugins: [

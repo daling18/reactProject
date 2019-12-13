@@ -1,8 +1,6 @@
-// 添加 loading效果
-import Loabable from 'react-loadable'
-// 引入loading的组件
+// 将组件暴露
 import Loading from "../component/Loading"
-
+import Loabable from 'react-loadable'
 const Home = Loabable ({
   loader : () => import('./home'),
   loading:Loading
