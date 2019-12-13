@@ -1,13 +1,17 @@
 import React, { Component } from 'react'
-
-export default class Item extends Component {
+import {withRouter} from 'react-router-dom'
+ class Item extends Component {
     render() {
         const {url,mag}=this.props.itemData
         return (
-            <a >
+            <a onClick={this.handerClick} >
                 <img src={url}/>
                 <p>{ mag }</p>
             </a>
         )
     }
+    handerClick=()=>{
+        this.props.history.push('/'+this.props.itemData.path)
+    }
 }
+export default withRouter(Item)

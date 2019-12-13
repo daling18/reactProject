@@ -1,12 +1,13 @@
 import React, { Component } from 'react'
-import './header.less'
-
+import cssobj from'./header.less'
 import Left from './item/left'
+import Right from './item/right'
 export default class Header extends Component {
     render() {
         return (
-            <div className="header">
+            <div className={cssobj.header}>
                 <Left />
+                <Right />
             </div>
         )
     }

@@ -1,6 +1,13 @@
 const deState={
-    a:1
+    homeData:{}
 }
-export const text=(state=deState,action)=>{
-    return deState
+export const homeData=(state=deState,action)=>{
+    const newState=JSON.parse(JSON.stringify(state))
+    switch (action.type){
+        case 'SUBMIT_HOME_DATA':
+            newState.homeData=action.data
+            return newState
+        default :
+            return state
+    }
 }

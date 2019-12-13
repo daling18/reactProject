@@ -16,12 +16,29 @@ module.exports  = {
         },
         {
             test: /\.less$/,
-            // exclude: /node_modules/,
+            exclude: /node_modules/,
             use: ['style-loader',
                 {
                     loader: 'css-loader',
                     options: {
-                        importLoaders: 2
+                        importLoaders: 2,
+                        modules:true,
+                        // localIdentName: '[local]___[hash:base64:5]'
+                    }
+                }, 
+                'postcss-loader',
+                {
+                    loader:"less-loader",
+                }]
+        },
+        {
+            test: /\.less$/,
+            include: /node_modules/,
+            use: ['style-loader',
+                {
+                    loader: 'css-loader',
+                    options: {
+                        importLoaders: 2,
                     }
                 }, 
                 'postcss-loader',
@@ -29,7 +46,6 @@ module.exports  = {
                     loader:"less-loader",
                     options:  {
                          javascriptEnabled: true
-                        
                     }
                 }]
         },
@@ -70,9 +86,7 @@ module.exports  = {
         
     },
     devServer: {
-        historyApiFallback: { //把history index.html
-            index: "/index.html",
-        },
+        historyApiFallback: true,
         proxy: {
             '/api': {
               target: 'https://as-vip.missfresh.cn',
@@ -91,6 +105,7 @@ module.exports  = {
     ],              // 插件
     output: {
         filename: 'main.js',  // 打包后文件名称
-        path: path.resolve(__dirname, './dist') // 打包后文件夹存放路径
+        path: path.resolve(__dirname, './dist'), // 打包后文件夹存放路径
+        publicPath:'/'
     }
 }

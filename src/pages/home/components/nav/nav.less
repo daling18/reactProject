@@ -1,0 +1,50 @@
+.nav-out{
+    position: relative;
+    width:100%;
+    background-color: #fff;
+    z-index: 2;
+    margin-top: -1px;
+    .nav-right-btn{
+        width: 2.625rem;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #fff;
+        background: #fff url(../../../../assets//img//nav-right.png) no-repeat center 0.5rem;
+        background-size: 0.875rem;
+        z-index: 15;
+        background-position-y: 50%;
+    }
+    .nav{
+        width:88%;
+        height: 2.625rem;
+        overflow: hidden;
+        >div{
+            width: 1380px ;
+            margin-left: 0.5rem;
+            // white-space: nowrap;
+            // display: flex;
+            // flex-wrap: nowrap;
+        }
+        
+        .nav-item{
+            display: inline-block;
+            box-sizing: border-box;
+            color: #262626;
+            font-size: 14PX;
+            text-align: center;
+            line-height: 40PX;
+            background-size: contain;
+            background-position: center right;
+            background-repeat: no-repeat;
+            span{
+                display: inline-block;
+                height: 100%;
+                margin: 0 0.9375rem;
+                box-sizing: border-box;
+                border-bottom: 0.125rem solid transparent;
+            }
+        }
+    }
+}
