@@ -2,31 +2,33 @@
 // 将pages的index.js中的暴露的组件引入
 
 import {Home , Classify , Find , Shopcar ,  My , NotFound,addressSelect,Login} from '../pages'
+
+
 // 将主路由暴露出去
-export const mainRoute = [
-{
+export const mainRoute = [{
   pathname: '/home',
   component : Home
 },
 {
   pathname: '/classify',
-  component : Login
+  component : Classify
 },
 {
   pathname: '/find',
-  component : addressSelect
+  component : Find
 },
 
 {
   pathname: '/shopcar',
   component : Shopcar,
-  exact:true,
-  children:[
-    {
-        pathname: '/shopcar/select',
-        component : addressSelect
-    }
-  ]
+},
+{
+  pathname: '/shopcar/select',
+  component : addressSelect
+},
+{
+  pathname: '/shopcar',
+  component : Shopcar
 },
 {
   pathname: '/my',
@@ -35,5 +37,9 @@ export const mainRoute = [
 {
   pathname: '/notFound',
   component : NotFound
+},
+{
+  pathname: '/login',
+  component : Login
 }
 ]

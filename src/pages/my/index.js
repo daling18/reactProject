@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+<<<<<<< HEAD
 import {Icon} from "antd"
 import Imh from "../../assets/img/img_20191206003404111.jpg"
 import Img from "../../assets/img/img_20191128143553558.jpg"
@@ -84,6 +85,14 @@ export default class My extends Component {
                         <Icon type="right" />
                     </li>
                 </ul>
+=======
+
+export default class index extends Component {
+    render() {
+        return (
+            <div className="content">
+                my
+>>>>>>> 2fcae67e3a9cbb9240d03bb0f2f654ef7be339df
             </div>
         )
     }

@@ -37,8 +37,7 @@ module.exports  = {
                          javascriptEnabled: true
                         
                     }
-                },
-            ]
+                }]
         },
         {
             test: /\.css$/,
@@ -87,8 +86,8 @@ module.exports  = {
                 pathRewrite:{'^/api':''},
                 changeOrigin:true,
                 secure:true
-            }
         }
+    }
     },
     plugins: [
         new HtmlWebpackPlugin({   // 向dist文件中自动添加模版html
