@@ -1,11 +1,20 @@
-import React, { Component } from 'react'
+import React,{Component} from 'react'
+import { Provider} from "react-redux";
 
-export default class index extends Component {
+import store from './store/store'
+import TabLeft from './TabLeft'
+import '@/assets/css/classify/classify.css'
+class Classify extends Component{  
     render() {
-        return (
-            <div className="content">
-                class
-            </div>
+        return(
+            <Provider store = {store}> 
+                <div className="content" >
+                    <TabLeft/>
+                </div>
+            </Provider>
         )
     }
+   
 }
+
+export default Classify

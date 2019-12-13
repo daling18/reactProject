@@ -8,7 +8,7 @@ const Home = Loabable ({
   loading:Loading
 })
 const Classify = Loabable ({
-  loader : () => import('./classify'),
+  loader : () => import('./Classify'),
   loading:Loading
 })
 const Find = Loabable ({
