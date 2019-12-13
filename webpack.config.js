@@ -23,7 +23,15 @@ module.exports  = {
                     options: {
                         importLoaders: 2
                     }
-                }, 'less-loader', 'postcss-loader']
+                }, 
+                'postcss-loader',
+                {
+                    loader:"less-loader",
+                    options:  {
+                         javascriptEnabled: true
+                        
+                    }
+                }]
         },
         {
             test: /\.css$/,
@@ -64,6 +72,14 @@ module.exports  = {
     devServer: {
         historyApiFallback: { //把history index.html
             index: "/index.html",
+        },
+        proxy: {
+            '/api': {
+              target: 'https://as-vip.missfresh.cn',
+              pathRewrite: {'^/api' : ''},
+              changeOrigin: true,     // target是域名的话，需要这个参数，
+              secure: false,          // 设置支持https协议的代理
+            }
         }
     },
     plugins: [
