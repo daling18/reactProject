@@ -45,16 +45,17 @@ class Index extends Component {
             betterScroll.finishPullUp()
         })
     }
-    getData=()=>{
-        gethomeotherData(this.props.match.params.id)
+    getData=(props)=>{
+        gethomeotherData(props.match.params.id)
         .then((res)=>{
 
-            this.bscroll()
+            
             this.setState({
                 dataArr:res.products,
                 showDtatList:res.products.slice(0,10)
             },()=>{
-                this.state.betterScroll.refresh()
+                // this.state.betterScroll.refresh()
+                this.bscroll()
             })
         })
     }
@@ -79,10 +80,11 @@ class Index extends Component {
         )
     }
     componentDidMount(){
-        this.getData()
+        this.getData(this.props)
     }
     componentWillReceiveProps(props){
-        this.getData()
+        console.log(props)
+        this.getData(props)
         this.state.betterScroll.scrollTo(0, 0, 0)
     }
 }
