@@ -1,7 +1,7 @@
 // 该文件是路由表的文件
 // 将pages的index.js中的暴露的组件引入
 
-import {Home , Classify , Find , Shopcar ,  My , NotFound} from '../pages'
+import {Home , Classify , Find , Shopcar ,  My , NotFound,addressSelect,Login} from '../pages'
 // 将主路由暴露出去
 export const mainRoute = [
 {
@@ -10,15 +10,23 @@ export const mainRoute = [
 },
 {
   pathname: '/classify',
-  component : Classify
+  component : Login
 },
 {
   pathname: '/find',
-  component : Find
+  component : addressSelect
 },
+
 {
   pathname: '/shopcar',
-  component : Shopcar
+  component : Shopcar,
+  exact:true,
+  children:[
+    {
+        pathname: '/shopcar/select',
+        component : addressSelect
+    }
+  ]
 },
 {
   pathname: '/my',

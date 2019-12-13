@@ -1,0 +1,107 @@
+.my{
+    width: 100%;
+}
+.my_head{
+    width: 100%;
+    height: 1.6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(//static-as.missfresh.cn/frontend/user/static/img/my-bg.95ae718.png) 100%;
+}
+.my_head>div{
+    height: .36rem;
+    width: .9rem;
+    line-height: .36rem;
+    font-size: 0.14rem;
+    color: #ff4891;
+    text-align: center;
+    border: 0.01rem solid #ff4891;
+    border-radius: 0.05rem;
+}
+.my_qian{
+    width: 100%;
+    height: .7rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: .1rem 0;
+    position: relative;
+}
+.my_qian div{
+    text-align: center;
+    color: #4d4d4d;
+}
+.my_img{
+    position: absolute;
+    height: .13rem;
+    width: .26rem;
+    left: .56rem;
+    top: .34rem;
+}
+.my_vip{
+    width: 3.5rem;
+    height: .6rem;
+    margin: 0 auto;
+}
+.vip_head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: .3rem;
+}
+.vip_head>h1{
+    font-size: .2rem;
+    color: #474542;
+    margin: 0;
+}
+.vip_head>div{
+    font-size: .13rem;
+    color: #969696;
+}
+.vip_foot{
+    height: .3rem;
+    line-height: .3rem;
+    color: #969696;
+    font-size: .12rem;
+}
+.vip_foot>span{
+    color: #ff4891;
+}
+.my_kefu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .16rem .25rem;
+}
+.my_kefu img{
+    width: .3rem;
+    height: .3rem;
+}
+.my_kefu>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #474542;
+    font-size: .12rem;
+}
+.my_imgs{
+    height: 1.1rem;
+    padding: .1rem .1rem 0;
+}
+.my_imgs>img{
+    height: 1rem;
+    width: 49.5%;
+}
+.my_function>li{
+    height: .6rem;
+    padding: 0 .16rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: .15rem;
+    color: #262626;
+}
+.my_function>li svg{
+    color: #969696;
+}
