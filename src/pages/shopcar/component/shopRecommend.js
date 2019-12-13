@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {getShopCar} from "../../../api/api"
 class shopRecommend extends Component {
     state={
-        data:[]
+        data:""
     }
     render() {
         return (
@@ -11,17 +11,16 @@ class shopRecommend extends Component {
                 <ul className="shop_ul">
                     {
                         // console.log(this.state.data)
-                        this.state.data.map((item,index)=>{
-                            // console.log(item)
-                           
-                         return (<li key={index}>
-                                <img className="li_img" src={item.image} />
-                                <p className="li_p" style={{color:"#474245"}}>{item.name}</p>
-                                <p className="li_p" style={{color:"#969696"}}>{item.subtitle}</p>
+                        this.state.data.map((item)=>{
+                            console.log(item)
+                         return (<li>
+                                <img className="li_img" src="https://image.missfresh.cn/93c5753d66a042d88f72da85574c227a.jpg" />
+                                <p className="li_p" style={{color:"#474245"}}>监控显cscdcdscdscdsscds示显示</p>
+                                <p className="li_p" style={{color:"#969696"}}>xsaxsaxscdscdscdscdscdsaxsaxsax</p>
                                 <div className="li_xia">
                                     <div>
-                                        <div style={{color:"red",fontSize:".12rem"}}>￥{item.pricePro.noVip.price/100}</div>
-                                        <div style={{color:"#969696",fontSize:".16rem"}}>￥{item.pricePro.vip ? item.pricePro.vip.price/100:item.pricePro.noVip.price/100}</div>
+                                        <div style={{color:"red",fontSize:".12rem"}}>￥6.9</div>
+                                        <div style={{color:"#969696",fontSize:".16rem"}}>￥9.9</div>
                                     </div>
                                     <img src="https://static-as.missfresh.cn/frontend/cart/static/img/new-cart.a16f026.png" />
                                 </div>

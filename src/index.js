@@ -12,10 +12,7 @@ render((
                 mainRoute.map(router=>{
                     return <Route path={router.pathname} component={router.component} key={router.pathname}/>
                 })
-                // mainRoute[3].children.map(router=>{
-                //     return <Route path={router.pathname} component={router.component} key={router.pathname}/>
-                // })
-            }   
+            }
             <Redirect to="/home" from="/" exact/>
         </Switch>
     </Router>
